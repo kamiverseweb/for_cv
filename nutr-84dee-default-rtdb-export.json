@@ -1,0 +1,105 @@
+{
+    "foods": [
+        {
+            "name": "cereal",
+            "iron": 33.2,
+            "image": "https://d2xdmhkmkbyw75.cloudfront.net/113_thumb.jpg"
+        },
+        {
+            "name": "liver",
+            "iron": 11.6,
+            "image": "https://d2xdmhkmkbyw75.cloudfront.net/2759_thumb.jpg"
+        },
+        {
+            "name": "oysters",
+            "iron": 9.2,
+            "image": "https://d2xdmhkmkbyw75.cloudfront.net/1421_thumb.jpg"
+        },
+        {
+            "name": "spinach",
+            "iron": 3.6,
+            "image": "https://d2xdmhkmkbyw75.cloudfront.net/263_thumb.jpg"
+        },
+        {
+            "name": "lentil",
+            "iron": 3.3,
+            "image": "https://d2xdmhkmkbyw75.cloudfront.net/230_thumb.jpg"
+        },
+        {
+            "name": "tomato paste",
+            "iron": 3.0,
+            "image": "https://d2xdmhkmkbyw75.cloudfront.net/306_thumb.jpg"
+        },
+        {
+            "name": "clams",
+            "iron": 2.8,
+            "image": "https://d2xdmhkmkbyw75.cloudfront.net/1419_thumb.jpg"
+        },
+        {
+            "name": "beef",
+            "iron": 2.7,
+            "image": "https://d2xdmhkmkbyw75.cloudfront.net/192_thumb.jpg"
+        },
+        {
+            "name": "dried apricot",
+            "iron": 2.7,
+            "image": "https://d2xdmhkmkbyw75.cloudfront.net/1166_thumb.JPG"
+        },
+        {
+            "name": "whole wheat bread",
+            "iron": 2.5,
+            "image": "https://d2xdmhkmkbyw75.cloudfront.net/1862_thumb.jpg"
+        },
+        {
+            "name": "cheese",
+            "calcium": 710,
+            "image":"https://d2xdmhkmkbyw75.cloudfront.net/1034_thumb.jpg"
+        },
+        {
+            "name": "plain nonfat yogurt",
+            "calcium": 199,
+            "image":"https://d2xdmhkmkbyw75.cloudfront.net/3113_thumb.jpg"
+        },
+        {
+            "name": "plain yogurt",
+            "calcium": 183,
+            "image":"https://d2xdmhkmkbyw75.cloudfront.net/744_thumb.jpg"
+        },
+        {
+            "name": "ice cream",
+            "calcium": 128,
+            "image":"https://d2xdmhkmkbyw75.cloudfront.net/39_thumb.jpg"
+        },
+        {
+            "name": "1 milk",
+            "calcium": 125,
+            "image":"https://d2xdmhkmkbyw75.cloudfront.net/376_thumb.jpg"
+        },
+        {
+            "name": "skim milk",
+            "calcium": 122,
+            "image":"https://d2xdmhkmkbyw75.cloudfront.net/810_thumb.jpg"
+        },
+        {
+            "name": "plain full fat yogurt",
+            "calcium": 121,
+            "image":"https://d2xdmhkmkbyw75.cloudfront.net/2323_thumb.jpg"
+        },
+        {
+            "name": "2% milk",
+            "calcium": 120,
+            "image":"https://d2xdmhkmkbyw75.cloudfront.net/377_thumb.jpg"
+        },
+        {
+            "name": "plain 2% greek yogurt",
+            "calcium": 115,
+            "image":"https://d2xdmhkmkbyw75.cloudfront.net/3984_thumb.JPG"
+        },
+        {
+            "name": "whole milk",
+            "calcium": 113,
+             "image":"https://d2xdmhkmkbyw75.cloudfront.net/878_thumb.jpg"
+        }
+        
+    ]
+}

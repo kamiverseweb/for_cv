@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+       
+        *{
+            margin:0;
+            font-family:'Barlow';
+         }
+         a{
+            text-decoration: none;
+            color:black;
+         }
+         .links p{
+            position: relative;
+            
+         }
+         .links p::before{
+            content:'';
+            width:30px;
+            height:40px;
+            border-radius:30%;
+            background-color: #e99957;
+            position: absolute;
+            opacity: 0;
+            left:-73px;
+            top:-10px;
+            transition: 0.4s;
+            
+         }
+         .mainP::after{
+            content: '';
+            width:30px;
+            height:40px;
+            border-radius:30%;
+            background-color: #00B074;
+            position: absolute;
+            left:-73px;
+            top:-10px;
+
+         }
+         .links p:hover:before{
+            opacity:1
+         }
+         .RadialProgress,.RadialProgressTwo,.RadialProgressThree{
+  --holesize: 35%;
+  --track-bg: hsl(233 34% 92%);
+  --progress-deg: 0deg; 
+
+  block-size: 20vmin;
+  inline-size: 20vmin;
+  min-inline-size: 100px;
+  min-block-size: 100px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  font-weight: 700;
+  font-size: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    background: conic-gradient(
+      rgb(69, 82, 229) var(--progress-deg), /* Прогресс черным цветом */
+      var(--track-bg) var(--progress-deg) /* Остальная часть трека */
+    );
+
+    mask-image: radial-gradient(
+      transparent var(--holesize),
+      white calc(var(--holesize) + 0.5px)
+    );
+  }
+  
+} 
+nav,.burger{
+    display:none;
+    transition: 0.5s;
+  }
+@media screen and (max-width:1200px){
+    .burger{
+        display: block;
+    }
+    body{
+        display:block !important;
+    }
+    .left{
+        display:none
+    }
+    .rightHead span{
+        display:none !important
+    }
+    nav.active{
+        display: flex;
+        opacity: 1;
+        flex-direction: column;
+        padding:30px;
+        gap:30px;
+        background-color: white;
+        width:30%;
+        position: absolute;
+        top:0;
+        right:0;
+        height:170vh;
+        box-shadow: 0px 0px 20px 10px gray;
+        z-index: 1; 
+    }
+}
+@media screen and (max-width:970px){
+    .third{
+        grid-area: 4/1/5/4 !important;
+        flex-direction: column;
+    }
+    .left{
+        display:none
+    }
+    .image{
+     grid-area: 1/1/3/5 !important;
+    }
+    .second{
+        grid-area:3/1/3/5 !important;
+    }
+    .rightMain{
+        grid-template-rows:repeat(8,1fr);;
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .third{
+        grid-area: 4/1/5/3 !important;
+        flex-direction: column;
+    }
+    .fourth {
+        grid-area: 4/3/5/5 !important;
+        flex-direction: column;
+    }
+    .fifth{
+        grid-area: 5/1/5/3 !important;
+        flex-direction: column;
+    }
+    .six{
+        grid-area: 5/3/5/5 !important;
+        flex-direction: column;
+    }
+    span{
+        display:none !important
+    }
+    .circles{
+        grid-area: 6/1/span 1/5 !important;
+        display: flex;
+        justify-content: space-between;
+    }
+  }
+  @media screen and (max-width:560px){
+    .circles{
+        flex-direction: column;
+    }
+  }
+
+
+
+    </style>
+</head>
+<body style="background-color: rgb(235, 234, 234);display:flex;">
+   <div class="left" style="background-color: white;width:12%;padding:30px 50px 50px 30px;">
+    <div class="logo">
+        <h1 style="font-family:'Poppins';letter-spacing: 2px;">EatWise <span style="color:green;font-size: 40px;">.</span></h1>
+        <p style="font-family: Barlow;color:rgb(184, 183, 183);font-weight: 600;">Nutrition calculator</p>
+    </div>
+    <div class="links" style="margin-top:50px;padding:20px;display: flex;flex-direction: column;gap:50px">
+        <a href="index.html"><p ><i class='bx bx-home-alt' style="margin-right: 10px;"></i>Main</p></a>
+        <a href=""><p class="mainP"><i class='bx bxs-dashboard' style="margin-right: 10px;"></i>Dashboard</p></a>
+        <a href="topF.html"><p><i class='bx bxs-baguette' style="margin-right: 10px;"></i> Top foods</p></a>
+        <a href="dayCal.html"><p><i class='bx bx-fork' style="margin-right: 10px;"></i>Daily Calories</p></a>
+        <a href=""><p><i class='bx bxs-hot' style="margin-right: 10px;"></i>Burn Calories</p></a>
+    </div>
+    <div class="" style="background-color: #00B074;border-radius: 10px;padding:20px;color:white;margin-top:40px;box-shadow: 0px 10px 20px 2px rgba(22, 26, 27, 0.23);">
+         <p>Organize your own menu</p>
+         <button style="padding:15px;border:none;border-radius: 10px;margin-top: 10px;cursor:pointer">Add Menu</button>
+    </div>
+    <p style="color:rgb(184, 183, 183);margin-top: 20px;padding-left: 20px;">Made By Zhasulan</p>
+   </div>
+
+   
+
+
+<div class="right" style="padding: 40px 50px;max-width:100%">
+    <div class="rightHead" style="display:flex;gap:20px;align-items: center;">
+        <div class="" style="display:flex;width:100%">
+            <input type="text" class="inp" placeholder="Search" style="border:none;padding:10px 10px;width:100%;border-top-left-radius: 10px;border-bottom-left-radius: 10px;">
+            <button class="search" style="border-top-right-radius: 10px;background-color: rgb(67, 102, 46);border-bottom-right-radius: 10px;padding:10px 15px;border:none;cursor: pointer;"><i class='bx bx-search' style="color:white;"></i></button>
+        </div>
+        <span style="background-color: #d2e7cd;border:none;border-radius: 10px;display: flex;align-items: center;padding:10px"><i class='bx bxs-bell' style='color:#2ddb82;font-size: 20px;'  ></i></span>
+        <span style="background-color: #f3deb9;border:none;border-radius: 10px;display: flex;align-items: center;padding:10px"><i class='bx bxs-message-square-detail' style='color:#db932d;font-size: 20px;'  ></i></span>
+        <span style="background-color: #fbcccc;border:none;border-radius: 10px;display: flex;align-items: center;padding:10px"><i class='bx bxs-cog' style='color:#ff5b5b;font-size: 20px;'></i></span>
+        <hr style="height:30px">
+        <div class="" style="display:flex;align-items: center;gap:20px">
+            <p>Ivan</p>
+            <img src="https://www.meme-arsenal.com/memes/5ddf11e7151a4b3a5e0b32e66341034d.jpg" style="height:50px;border-radius:100%;">
+        </div>
+        <div class="navbar">
+            <div class="burger" onclick="toggle()">&#9776</div>
+            <nav >
+                <div class="bur" onclick="tog()">&#9776</div>
+                <a href="index.html"><i class='bx bx-home-alt' style="margin-right: 10px;"></i>Main</a>
+                <a href="dashboard.html"><i class='bx bxs-dashboard' style="margin-right: 10px;"></i>Dashboard</a>
+                <a href="topF.html"><i class='bx bxs-baguette' style="margin-right: 10px;"></i>Top foods</a>
+                <a href=""><i class='bx bxs-baguette' style="margin-right: 10px;"></i> Burn Calories</a>
+                <a href="dayCal.html"><i class='bx bx-fork' style="margin-right: 10px;"></i>Daily Calories</a>
+            </nav>
+        
+        </div>
+    </div>
+
+    <div class="" style="margin-top: 20px;color:black" >
+        <p style="font-weight: 600;">Hello,Ivan !</p>
+        <p style="color:gray;margin-top: 3px;">Here you can calculate calories</p>
+     </div>
+     <div class="rightMain" style="display:grid;grid-template-columns: repeat(4,1fr);margin-top:20px;grid-template-rows: repeat(4,120px);gap:20px">
+            <div class="image" style="background-image: url(https://img.freepik.com/premium-photo/drawing-bunch-vegetables-knife_1036447-56738.jpg);background-size:contain;grid-area:1/1/4/3 ;background-repeat: no-repeat;border-radius: 20px;background-position: center;background-color: rgb(255, 255, 255);"></div>
+            <div class="second foodName" style="grid-area: 4/1/5/3;background-color: white;border-radius: 10px;display: flex;align-items: center;justify-content: center;font-size: 30px;">FOOD NAME</div>
+            <div class="third" style="background-color: white;border-radius: 5px;padding:30px;display: flex;gap:20px;grid-area: 1/3/2/4;">
+                <span style="background-color: #d2f4be;width:60px;height:60px;border-radius:100%;display: flex;align-items: center;justify-content: center;"><i class='bx bxs-bowl-rice' style='color:#5ccf53;font-size:clamp(10px,20px,30px);'  ></i></span>
+                <div class="">
+                    <h1 class="protein">0g</h1>
+                    <h4 style="color:gray;margin-top:5px;">Proteins</h4>
+                </div>
+            </div>
+            <div class="fourth" style="background-color: white;border-radius: 5px;padding:30px;display: flex;gap:20px;grid-area:1/4/2/4 ;">
+                <span style="background-color: #f4c7be;width:60px;height:60px;border-radius:100%;display: flex;align-items: center;justify-content: center;"><i class='bx bxs-baguette' style='color:#e54417;font-size:clamp(10px,20px,30px);'  ></i></span>
+                <div class="">
+                    <h1 class="carbohydrate">0g</h1>
+                    <h4 style="color:gray;margin-top:5px;">Carboh</h4>
+                </div>
+            </div>
+            <div class="fifth" style="background-color: white;border-radius: 5px;padding:30px;display: flex;gap:20px;grid-area: 2/3/3/4;">
+                <span style="background-color: #d2ecf4;width:60px;height:60px;border-radius:100%;display: flex;align-items: center;justify-content: center;"><i class='bx bxs-circle-three-quarter' style='color:#59aae5;font-size: 30px;'  ></i></span>
+                <div class="">
+                    <h1 class="calories">0J</h1>
+                    <h4 style="color:gray;margin-top:5px;">Calories</h4>
+                </div>
+            </div>
+            <div class="six" style="background-color: white;border-radius: 5px;padding:30px;display: flex;gap:20px;grid-area: 2/4/3/5;">
+                <span style="background-color: #f4e6be;width:60px;height:60px;border-radius:100%;display: flex;align-items: center;justify-content: center;"><i class='bx bxs-droplet-half' style='color:#e59017;font-size: 30px;'></i></span>
+                <div class="">
+                    <h1 class="fats">0g</h1>
+                    <h4 style="color:gray;margin-top:5px;">Fats</h4>
+                </div>
+            </div>
+            <div class="circles" style="background-color: white;display: flex;padding:20px;border-radius: 10px;gap:50px;grid-area: 3/3/5/5;">
+                <div class="" style="display: flex;flex-direction: column;align-items: center;gap:10px">
+                    <div
+                        class="RadialProgress"
+                        role="progressbar"
+                        >
+                    </div>
+                    <p class='sugar'style="position:relative;bottom:93px" >0%</p>
+                    <p style="font-size: 20px;">Sugar</p>
+                </div>
+
+                <div class="" style="display: flex;flex-direction: column;align-items: center;gap:10px">
+                        <div
+                            class="RadialProgressTwo"
+                            role="progressbar"
+                            >
+                        </div>
+                        <p style="position:relative;bottom:93px"  class="iron">0%</p>
+                        <p style="font-size: 20px;">Iron</p>
+                    
+                </div>
+
+                <div class="" style="display: flex;flex-direction: column;align-items: center;gap:10px">
+                    <div
+                        class="RadialProgressThree"
+                        role="progressbar">
+                    </div>
+                    <p style="position:relative;bottom:93px"  class="salt">0%</p>
+                    <p style="font-size: 20px;">Salt</p>
+                </div>
+            
+            </div>
+</div>
+    <script>
+        let inp=document.querySelector('input')
+        async function calc(inp){
+            let api='https://trackapi.nutritionix.com/v2/natural/nutrients'
+            let resp=await fetch(api,{
+                method:'POST',
+                headers:{
+                'Content-type':'application/json',
+                'x-app-id':'6f08e889',
+                'x-app-key':'9e3d013637cc9b3360bd8721c2ef2b2d'
+                },
+                body: JSON.stringify({ query:inp })
+            })
+            let data=await resp.json()
+            console.log(data)
+            document.querySelector('.foodName').textContent=data.foods[0].food_name.toUpperCase()
+            document.querySelector('.protein').textContent=data.foods[0].nf_protein+'g'
+            document.querySelector('.carbohydrate').textContent=data.foods[0].nf_total_carbohydrate+'g'
+            document.querySelector('.calories').textContent=data.foods[0].nf_calories+'J'
+            document.querySelector('.fats').textContent=data.foods[0].nf_total_fat+'g'
+
+            let food=data.foods[0]
+            let weight=data.foods[0].serving_weight_grams;
+            // sugar
+            let sugarPer=((food.nf_sugars/weight)*100).toFixed(1)
+            if(food.nf_sugars==null){
+                sugarPer=0
+            }
+            document.querySelector('.sugar').textContent=sugarPer+'%'
+            document.querySelector('.RadialProgress').style.setProperty('--progress-deg',(360*sugarPer/100)+'deg')
+            document.querySelector('.image').style.backgroundImage=`url(${food.photo.highres})`
+            
+
+            //  iron
+            let ironValue=food.full_nutrients.find(n=>n.attr_id==303)
+            let iron =ironValue ? ironValue.value : 0
+            let ironPer=((iron/weight)*100).toFixed(1)
+            document.querySelector('.iron').textContent=ironPer+'%'
+            document.querySelector('.RadialProgressTwo').style.setProperty('--progress-deg',(360*ironPer/100)+'deg')
+
+            //  salt
+            let salt=(food.nf_sodium*2.5)/100
+            let saltPer=((salt/weight)*100).toFixed(2)
+            document.querySelector('.salt').textContent=saltPer+'%'
+            document.querySelector('.RadialProgressThree').style.setProperty('--progress-deg',(360*saltPer/100)+'deg')
+        }
+        document.querySelector('.search').addEventListener('click',()=>{
+             calc(inp.value)
+        
+    })
+       document.querySelector('.burger').addEventListener('click',()=>{
+        document.querySelector('nav').classList.toggle('active')
+       })
+       document.querySelector('.bur').addEventListener('click',()=>{
+        document.querySelector('nav').classList.toggle('active')
+       })
+       
+
+    </script>
+</body>
+</html>

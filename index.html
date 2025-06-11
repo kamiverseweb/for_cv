@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="https://t4.ftcdn.net/jpg/01/58/87/77/360_F_158877761_vSJ4nKTUvQG8OYgsIJUTpeBwiqm6cynN.jpg ">
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin:0;
+            font-family:'Barlow';
+         }
+         a{
+            text-decoration: none;
+            color:black
+         }
+         img{
+            width:100%;
+            height:100%;
+            border-radius: 10px;
+         }
+         .links p{
+            position: relative;
+            
+         }
+         .links p::before{
+            content:'';
+            width:30px;
+            height:40px;
+            border-radius:30%;
+            background-color: #e99957;
+            position: absolute;
+            opacity: 0;
+            left:-73px;
+            top:-10px;
+            transition: 0.4s;
+            
+         }
+         .mainP::after{
+            content: '';
+            width:30px;
+            height:40px;
+            border-radius:30%;
+            background-color: #00B074;
+            position: absolute;
+            left:-73px;
+            top:-10px;
+
+         }
+         .links p:hover:before{
+            opacity:1
+         }
+         .navbar{
+            display:none
+         }
+    </style>
+</head>
+    <body style="background-color: rgb(235, 234, 234);display: flex;">
+        <div class="left" style="background-color: white;width:12%;padding:30px 50px 50px 30px;">
+         <div class="logo">
+             <h1 style="font-family:'Poppins';letter-spacing: 2px;">EatWise <span style="color:green;font-size: 40px;">.</span></h1>
+             <p style="font-family: Barlow;color:rgb(184, 183, 183);font-weight: 600;">Nutrition calculator</p>
+         </div>
+         <div class="links" style="margin-top:50px;padding:20px;display: flex;flex-direction: column;gap:50px">
+             <a href=""><p class="mainP"><i class='bx bx-home-alt' style="margin-right: 10px;"></i>Main</p></a>
+             <a href="dashboard.html"><p><i class='bx bxs-dashboard' style="margin-right: 10px;"></i>Dashboard</p></a>
+             <a href="topF.html"><p><i class='bx bxs-baguette' style="margin-right: 10px;"></i> Top foods</p></a>
+             <a href="dayCal.html"><p><i class='bx bx-fork' style="margin-right: 10px;"></i>Daily Calories</p></a>
+             <a href=""><p><i class='bx bxs-hot' style="margin-right: 10px;"></i>Burn Calories</p></a>
+         </div>
+         <div class="" style="background-color: #00B074;border-radius: 10px;padding:20px;color:white;margin-top:40px;box-shadow: 0px 10px 20px 2px rgba(22, 26, 27, 0.23);">
+              <p>Organize your own menu</p>
+              <button style="padding:15px;border:none;border-radius: 10px;margin-top: 10px;cursor:pointer">Add Menu</button>
+         </div>
+         <p style="color:rgb(184, 183, 183);margin-top: 20px;padding-left: 20px;">Made By Zhasulan</p>
+        </div>
+        <div class="navbar">
+            <nav>
+                <a href="index.html"><i class='bx bx-home-alt' style="margin-right: 10px;"></i>Main</a>
+                <a href="dashboard.html"><i class='bx bxs-dashboard' style="margin-right: 10px;"></i>Dashboard</a>
+                <a href=""><i class='bx bxs-baguette' style="margin-right: 10px;"></i>Burn Calories</a>
+                <a href="topF.html"><i class='bx bxs-baguette' style="margin-right: 10px;"></i> Top foods</a>
+                <a href="dayCal.html"><i class='bx bx-fork' style="margin-right: 10px;"></i>Daily Calories</a>
+            </nav>
+            <span class="burger">&#9776</span>
+        </div>
+        <div class="right" style="padding:50px;width:80%;overflow: hidden;display:flex;flex-direction: column;">
+            <div class="rightHead" style="display:flex;gap:20px;align-items: center;justify-content: end;">
+                <button style="background-color: #d2e7cd;border:none;border-radius: 10px;display: flex;align-items: center;padding:10px"><i class='bx bxs-bell' style='color:#2ddb82;font-size: 20px;'  ></i></button>
+                <button style="background-color: #f3deb9;border:none;border-radius: 10px;display: flex;align-items: center;padding:10px"><i class='bx bxs-message-square-detail' style='color:#db932d;font-size: 20px;'  ></i></button>
+                <button style="background-color: #fbcccc;border:none;border-radius: 10px;display: flex;align-items: center;padding:10px"><i class='bx bxs-cog' style='color:#ff5b5b;font-size: 20px;'></i></button>
+                <hr style="height:30px">
+                <div class="" style="display:flex;align-items: center;gap:20px">
+                    <p>Ivan</p>
+                    <img src="https://www.meme-arsenal.com/memes/5ddf11e7151a4b3a5e0b32e66341034d.jpg" style="height:50px;border-radius:100%;">
+                </div>
+            </div>
+            <h1 style="font-size: 50px;font-family:Poppins;font-weight: 300;max-width:70%">Track what you eat,and maintain health with <span style="font-family: Poppins;font-weight: 800;">EatWise .</span></h1>
+            <div class="" style="display:grid;grid-template-columns: repeat(14,80px);grid-template-rows: repeat(2,200px);gap:20px;position: relative;right:120px;z-index:-1;margin-top: 40px;">
+                <img src="https://mgmhealthcare.in/wp-content/uploads/2023/09/Banner-resize.jpg" alt="" style="grid-area: 2/1/2/7;object-fit: cover;">
+                <img src="https://www.monash.edu/__data/assets/image/0010/3464767/Nutrition-Science-Scholars-Scholarship-banner.jpg"  style='grid-area:1/6/1/12'alt="">
+                <div style="background-color:blueviolet;border-radius: 10px;color:white;font-family: monospace;padding:40px;grid-area:1/2/1/6;font-size: 30px;">" Eat to fuel your body, not to feed your emotions"  😎</div>
+                <div style="background-color:rgb(164, 224, 164);border-radius: 10px;color:rgb(0, 0, 0);font-family: monospace;padding:40px;grid-area:2/7/2/11;font-size: 30px;display:flex;align-items: center;justify-content: center;">200,000 restaurant Items 🔥🎈</div>
+                <div style="background-color:rgb(95, 204, 234);border-radius: 10px;color:rgb(0, 0, 0);font-family: monospace;padding:40px;grid-area:1/12/2/15;font-size: 30px;display:flex;align-items: center;justify-content: center;">gain weight or lose fat</div>
+                <div style="background-color:rgb(234, 178, 95);border-radius: 10px;color:rgb(255, 255, 255);font-family: monospace;padding:60px;grid-area:2/11/2/17;font-size: 30px;display:flex;align-items: center;justify-content: center;">1.000.000 items from grocery brands 🎉</div>
+            </div>
+        </div>
+
+</body>
+</html>

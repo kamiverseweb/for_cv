@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="https://t4.ftcdn.net/jpg/01/58/87/77/360_F_158877761_vSJ4nKTUvQG8OYgsIJUTpeBwiqm6cynN.jpg ">
+</head>
+<style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin:0;
+            font-family:'Barlow';
+         }
+         a{
+            text-decoration: none;
+            color:black
+         }
+         img{
+            width:100%;
+            height:100%;
+            border-radius: 10px;
+         }
+         .links p{
+            position: relative;
+            
+         }
+         .links p::before{
+            content:'';
+            width:30px;
+            height:40px;
+            border-radius:30%;
+            background-color: #e99957;
+            position: absolute;
+            opacity: 0;
+            left:-73px;
+            top:-10px;
+            transition: 0.4s;
+            
+         }
+         .mainP::after{
+            content: '';
+            width:30px;
+            height:40px;
+            border-radius:30%;
+            background-color: #00B074;
+            position: absolute;
+            left:-73px;
+            top:-10px;
+
+         }
+         .links p:hover:before{
+            opacity:1
+         }
+         .navbar{
+            display:none
+         }
+         h2{
+            color:rgb(45, 120, 45);
+            text-decoration: underline;
+            cursor: pointer;
+         }
+         .li img{
+            max-width:150px;
+            max-height:150px;
+         }
+         .li{
+            margin-top:30px;
+            display:flex;
+            gap:20px;
+            align-items: center;
+         }
+         .main hr{
+            border:1px solid rgba(128, 128, 128, 0.355);
+            margin-top: 20px;
+         }
+         .newList img{
+            max-width:300px
+         }
+         .newList{
+            display:none;
+            position: relative;
+         }
+         
+
+</style>
+<body style="background-color: rgb(235, 234, 234);display: flex;">
+     <div class="left" style="background-color: white;width:12%;padding:30px 50px 50px 30px;position: fixed;">
+         <div class="logo">
+             <h1 style="font-family:'Poppins';letter-spacing: 2px;">EatWise <span style="color:green;font-size: 40px;">.</span></h1>
+             <p style="font-family: Barlow;color:rgb(184, 183, 183);font-weight: 600;">Nutrition calculator</p>
+         </div>
+         <div class="links" style="margin-top:50px;padding:20px;display: flex;flex-direction: column;gap:50px">
+             <a href="index.html"><p class="mainP"><i class='bx bx-home-alt' style="margin-right: 10px;"></i>Main</p></a>
+             <a href="dashboard.html"><p><i class='bx bxs-dashboard' style="margin-right: 10px;"></i>Dashboard</p></a>
+             <a href=""><p><i class='bx bxs-baguette' style="margin-right: 10px;"></i> Top foods</p></a>
+             <a href="dayCal.html"><p><i class='bx bx-fork' style="margin-right: 10px;"></i>Daily Calories</p></a>
+             <a href=""><p><i class='bx bxs-hot' style="margin-right: 10px;"></i>Burn Calories</p></a>
+         </div>
+         <div class="" style="background-color: #00B074;border-radius: 10px;padding:20px;color:white;margin-top:40px;box-shadow: 0px 10px 20px 2px rgba(22, 26, 27, 0.23);">
+              <p>Organize your own menu</p>
+              <button style="padding:15px;border:none;border-radius: 10px;margin-top: 10px;cursor:pointer">Add Menu</button>
+         </div>
+         <p style="color:rgb(184, 183, 183);margin-top: 20px;padding-left: 20px;">Made By Zhasulan</p>
+        </div>
+        <div class="right" style="padding:50px;width:80%;overflow: hidden;display:flex;flex-direction: column;margin-left:240px;">
+            <div class="rightHead" style="display:flex;gap:20px;align-items: center;justify-content: end;">
+                <button style="background-color: #d2e7cd;border:none;border-radius: 10px;display: flex;align-items: center;padding:10px"><i class='bx bxs-bell' style='color:#2ddb82;font-size: 20px;'  ></i></button>
+                <button style="background-color: #f3deb9;border:none;border-radius: 10px;display: flex;align-items: center;padding:10px"><i class='bx bxs-message-square-detail' style='color:#db932d;font-size: 20px;'  ></i></button>
+                <button style="background-color: #fbcccc;border:none;border-radius: 10px;display: flex;align-items: center;padding:10px"><i class='bx bxs-cog' style='color:#ff5b5b;font-size: 20px;'></i></button>
+                <hr style="height:30px">
+                <div class="" style="display:flex;align-items: center;gap:20px">
+                    <p>Ivan</p>
+                    <img src="https://www.meme-arsenal.com/memes/5ddf11e7151a4b3a5e0b32e66341034d.jpg" style="height:50px;border-radius:100%;">
+                </div>
+                <div class="navbar">
+                    <nav>
+                        <a href="index.html"><i class='bx bx-home-alt' style="margin-right: 10px;"></i>Main</a>
+                        <a href="dashboard.html"><i class='bx bxs-dashboard' style="margin-right: 10px;"></i>Dashboard</a>
+                        <a href=""><i class='bx bxs-baguette' style="margin-right: 10px;"></i>Burn Calories</a>
+                        <a href="topF.html"><i class='bx bxs-baguette' style="margin-right: 10px;"></i> Top foods</a>
+                        <a href="dayCal.html"><i class='bx bx-fork' style="margin-right: 10px;"></i>Daily Calories</a>
+                    </nav>
+                    <span class="burger">&#9776</span>
+                </div>
+            </div>
+            <div class="main" style="background-color: white;border-radius: 10px;padding:30px;margin-top: 20px;">
+                <div class=" foodList">
+                <h1>Food list</h1>
+                <div class=" li">
+                    <img src="https://images-prod.healthline.com/hlcmsresource/images/topic_centers/2020-1/Pumpkin-Seeds-1296x728-body6.jpg" alt="">
+                    <h2 class="nutrients" onclick="proteins()">Which Food are highest in Iron?</h2>  
+                </div>
+                <hr>
+                <div class=" li">
+                    <img src="https://media.post.rvohealth.io/wp-content/uploads/2020/08/642x361_IMAGE_1_8_Fast_Facts_About_Calcium.jpg" alt="">
+                    <h2 class="nutrients" onclick="calcium()">Which Products have most calcium?</h2>
+                </div>
+                <hr>
+                <div class=" li">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpX1Ut5eFtME_JjgpQhH89wDito-zZiVo4Kw&s" alt="">
+                    <h2 class="nutrients">Which fruits contains carbs?</h2>
+                </div>
+                <hr>
+                <div class=" li">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcH0ftpWz6rrnDbLlnuq8_i1k0TqW-QZ4wfg&s" alt="">
+                    <h2  class="nutrients">Which Products are highest in Protein?</h2>
+                </div>
+                <hr>
+                </div>
+                    <div class="newList" >
+                        
+                       
+                       
+                    </div>
+            </div>
+        </div>
+    <script>
+         let foodList=document.querySelector('.foodList')
+        let main=document.querySelector('.main')
+        let newList=document.querySelector('.newList')
+
+        function proteins(){
+        fetch('https://nutr-84dee-default-rtdb.firebaseio.com/.json')
+        .then(responce=>responce.json())
+        .then(data=>{
+            let newData=data.foods.slice(0,10)
+            console.log(newData)
+            foodList.style.display='none'
+            newList.style.display='block'  
+            newList.innerHTML=`
+            <i class='bx bxs-chevron-left-circle icon' style='color:#13a316;position: absolute;top:0;right:0;transform: scale(2);'></i>
+             <h3 style="font-size: 30px;">Which foods are highest in iron?</h3>
+                        <div class=" new" style="display:flex;gap:50px;margin-top: 30px;">
+                            <p style="max-width:30%">Did you know that iron isn't just found in meat products? Iron is more easily absorbed from meat than plants, but don't let that keep you from meeting your iron needs with plant-based foods! To help improve your absorption of iron from plant-based foods, have something with vitamin C, like citrus fruit, tomatoes or bell peppers, on the side.</p>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5a7OvYuMMLbGWxh3ljLRz8whs3KgnLlbYLA&s" alt="">
+                        </div>
+                         <div class="" style="margin-top: 60px;display:flex;justify-content: space-between;padding-inline: 50px;">
+                            <h4>Food name</h4>
+                            <h4>Iron(mg)</h4>
+                        </div>
+                        <hr> 
+            ` 
+            for(let i=0;i<newData.length;i++){
+                newList.innerHTML+=
+                `
+                 <div style="margin-top: 20px;display:flex;justify-content: space-between;padding-inline: 50px;align-items:center">    
+                            <div class="" style="display:flex;align-items:center;gap:10px">
+                                <img style='max-width:100px;max-height:100px' src="${newData[i].image}">
+                                <h4>${newData[i].name}</h4>
+                            </div>
+                            <h4>${newData[i].iron}mg</h4>
+                        </div>
+                `
+            } 
+            document.querySelector('.icon').addEventListener('click',()=>{
+            foodList.style.display='block'
+            newList.style.display='none' 
+        })
+        })
+    }
+
+    function calcium(){
+        fetch('https://nutr-84dee-default-rtdb.firebaseio.com/.json')
+        .then(responce=>responce.json())
+        .then(data=>{
+            let newData=data.foods.slice(10,20)
+            foodList.style.display='none'
+            newList.style.display='block'   
+            newList.innerHTML=`
+            <i class='bx bxs-chevron-left-circle icon' style='color:#13a316;position: absolute;top:0;right:0;transform: scale(2);'></i>
+             <h3 style="font-size: 30px;">Which dairy products have the most calcium?</h3>
+                        <div class=" new" style="display:flex;gap:50px;margin-top: 30px;">
+                            <p style="max-width:30%">Dairy products are some of the best sources of calcium in our diets. Choose low-fat, unflavored dairy products to get the most calcium per calorie. Cheese is high in fat and calories, so choose it less often.</p>
+                            <img src="https://d3plwh5kl8nxwl.cloudfront.net/Boost_your_Calcium_Intake_40c76ad16e.jpg" alt="">
+                        </div>
+                         <div class="" style="margin-top: 60px;display:flex;justify-content: space-between;padding-inline: 50px;">
+                            <h4>Food name</h4>
+                            <h4>Iron(mg)</h4>
+                        </div>
+                        <hr> 
+            ` 
+            for(let i=0;i<newData.length;i++){
+                newList.innerHTML+=
+                `
+                 <div style="margin-top: 20px;display:flex;justify-content: space-between;padding-inline: 50px;align-items:center">    
+                            <div class="" style="display:flex;align-items:center;gap:10px">
+                                <img style='max-width:100px;max-height:100px' src="${newData[i].image}">
+                                <h4>${newData[i].name}</h4>
+                            </div>
+                            <h4>${newData[i].calcium}mg</h4>
+                        </div>
+                `
+            } 
+            document.querySelector('.icon').addEventListener('click',()=>{
+            foodList.style.display='block'
+            newList.style.display='none' 
+        })
+        })
+    }
+    
+    </script>
+</body>
+</html>
